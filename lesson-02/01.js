@@ -8,11 +8,37 @@
 */
 
 // тестовые данные (значения можно менять)
-const isAdmin = false
-const isVerifiedUser = true
-const hasSpecialPermission = true
-const hasTemporaryPass = false
+// const isAdmin = true
+// const isVerifiedUser = true
+// const hasSpecialPermission = true
+// const hasTemporaryPass = false
+const user = {
+    username: 'Admin Without Permission and Pass',
+    isAdmin: true,
+    isVerifiedUser: true,
+    hasSpecialPermission: true,
+    hasTemporaryPass: false,
+}
+const pechkin = {
+    username: 'Admin Without Permission and Pass',
+    isAdmin: true,
+    isVerifiedUser: true,
+    hasSpecialPermission: true,
+    hasTemporaryPass: false,
+}
 
-let isAccess
 
-// your code
+function getResours(object) {
+
+    const notIsAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);
+    const notHasPermissonOrHasPass = (object.hasSpecialPermission || object.hasTemporaryPass);
+    const isAccess = (notIsAdminOrIsVerifiedUser && notHasPermissonOrHasPass);
+
+    if (!isAccess) {
+        return 'Доступ запрещен'
+    }
+
+    return 'Доступ разрешен';
+
+}
+console.log(getResours(user))

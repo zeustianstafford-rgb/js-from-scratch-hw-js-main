@@ -1,9 +1,9 @@
-const sum = 0;
-const i = 1;
+let sum = 0;
 
-while (sum <= 20) {
+while (sum < 20) {
 
-    sum += i;
-    i++;
+    sum += 1;
+
+    console.log(sum)
 }
 

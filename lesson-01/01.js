@@ -1,7 +1,9 @@
+const sum = 0;
+const i = 1;
 
-let sum = 0
-let i = 1
-while (i <=20) {
+while (sum <= 20) {
+
     sum += i;
     i++;
 }
+

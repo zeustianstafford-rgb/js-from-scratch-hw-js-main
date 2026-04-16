@@ -30,9 +30,9 @@ const pechkin = {
 
 function getResours(object) {
 
-    const notIsAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);
-    const notHasPermissonOrHasPass = (object.hasSpecialPermission || object.hasTemporaryPass);
-    const isAccess = (notIsAdminOrIsVerifiedUser && notHasPermissonOrHasPass);
+    const isAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);
+    const hasPermissonOrHasPass = (object.hasSpecialPermission || object.hasTemporaryPass);
+    const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
 
     if (!isAccess) {
         return 'Доступ запрещен'

@@ -27,7 +27,6 @@ const pechkin = {
     hasTemporaryPass: false,
 }
 
-
 function getResours(object) {
 
     const isAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);

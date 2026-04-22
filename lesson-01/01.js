@@ -1,9 +1,11 @@
-let sum = 0;
+// С помощью цикла while найдите сумму чисел от 1 до 20
+// Результат присвойте переменной sum
+
+// your code
+let  total  = 1;
 let i = 1;
-while (sum < 20) {
-
-    sum += 1;
+while (total < 20) {
+    total  += 1;
     i++;
-    console.log(sum)
+    console.log(total);
 }
-

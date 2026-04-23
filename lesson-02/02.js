@@ -28,6 +28,6 @@ console.log('Второй бросок: ' + dice2)
 // }
 
 if (!isWinningDouble){
-  return ('Не выигрышный дубль.')
+  return ('Проигрышный дубль.')
 }
 return ('Выигрышный дубль.')

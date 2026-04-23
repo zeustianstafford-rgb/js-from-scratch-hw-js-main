@@ -6,7 +6,7 @@
 
 const score = Math.floor(Math.random()*100) + 1; // тестовое значение, можно изменять
 console.log (score);
-// let grade = score;
+let grade = score;
 function pechkin(object) {
 //   let f = (grade <= 49);
 //   let D = (grade = 50 <= 69);
@@ -25,6 +25,7 @@ while (grade <= 49) {
         console.log('Оценка B')
     }
    else  {console.log('Оценка 100')}
+   break
 }
 
 console.log(pechkin);

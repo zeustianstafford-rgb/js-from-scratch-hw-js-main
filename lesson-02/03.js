@@ -7,12 +7,6 @@
 // your code
 const score = Math.floor(Math.random() * 100) + 1;
 let grade = score;
-let F;
-let D;
-let C;
-let B;
-let A;
-
 function ball(object) {
     if (object >= 0 && object <= 49) {
         return 'F';

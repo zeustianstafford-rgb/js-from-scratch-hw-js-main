@@ -26,4 +26,3 @@ function ball(object) {
 
 }
 console.log(ball(grade), score);
-

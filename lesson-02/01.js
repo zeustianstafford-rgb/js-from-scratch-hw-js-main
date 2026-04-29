@@ -21,9 +21,9 @@ const user = {
 }
 const pechkin = {
     username: 'Admin Without Permission and Pass',
-    isAdmin: true,
-    isVerifiedUser: true,
-    hasSpecialPermission: true,
+    isAdmin: false,
+    isVerifiedUser: false,
+    hasSpecialPermission: false,
     hasTemporaryPass: false,
 }
 
@@ -39,4 +39,5 @@ function getResourse(object) {
 
     return 'Доступ разрешен';
 }
-console.log(getResourse(user))
+console.log(getResourse(user));
+console.log(getResourse(pechkin));

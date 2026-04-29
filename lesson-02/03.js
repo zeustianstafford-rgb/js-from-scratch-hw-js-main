@@ -6,23 +6,24 @@
 
 // your code
 const score = Math.floor(Math.random() * 100) + 1;
-let grade = score;
 function ball(object) {
-    if (object >= 0 && object <= 49) {
+    if (score >= 0 && score <= 49) {
         return 'F';
     }
-    if (object >= 50 && object <= 69) {
+    if (score >= 50 && score <= 69) {
         return 'D';
     }
 
-    if (object >= 70 && object <= 79) {
+    if (score >= 70 && score <= 79) {
         return 'C';
     }
 
-    if (object >= 80 && object <= 89) {
+    if (score >= 80 && score <= 89) {
         return 'B';
     }
     return 'A';
 
 }
-console.log(ball(grade), score);
+let grade = ball;
+
+console.log(ball(grade));

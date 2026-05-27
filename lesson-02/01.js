@@ -8,36 +8,53 @@
 */
 
 // тестовые данные (значения можно менять)
-// const isAdmin = true
-// const isVerifiedUser = true
-// const hasSpecialPermission = true
-// const hasTemporaryPass = false
-const user = {
-    username: 'Admin Without Permission and Pass',
-    isAdmin: true,
-    isVerifiedUser: true,
-    hasSpecialPermission: true,
-    hasTemporaryPass: false,
+const isAdmin = true
+const isVerifiedUser = true
+const hasSpecialPermission = true
+const hasTemporaryPass = false
+
+const isAccess = (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
+if (isAccess === true) {
+   console.log("Доступ разрешен!")
+} else {
+    console.log("Доступ запрещен!");
+
 }
-const pechkin = {
-    username: 'Admin Without Permission and Pass',
-    isAdmin: false,
-    isVerifiedUser: false,
-    hasSpecialPermission: false,
-    hasTemporaryPass: false,
-}
+// else {
+//     alert("Доступ запрещен!")
+// };
+// console.log(isAccess);
 
-function getResourse(object) {
 
-    const isAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);
-    const hasPermissonOrHasPass = (object.hasSpecialPermission || object.hasTemporaryPass);
-    const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
 
-    if (!isAccess) {
-        return 'Доступ запрещен'
-    }
+// const user = {
+//     username: 'Admin Without Permission and Pass',
+//     isAdmin: true,
+//     isVerifiedUser: true,
+//     hasSpecialPermission: true,
+//     hasTemporaryPass: false,
+// }
 
-    return 'Доступ разрешен';
-}
-console.log(getResourse(user));
-console.log(getResourse(pechkin));
+
+// const pechkin = {
+//     username: 'Admin Without Permission and Pass',
+//     isAdmin: false,
+//     isVerifiedUser: false,
+//     hasSpecialPermission: false,
+//     hasTemporaryPass: false,
+// }
+
+// function getResourse(object) {
+
+//     const isAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);
+//     const hasPermissonOrHasPass = (object.hasSpecialPermission || object.hasTemporaryPass);
+//     const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
+
+//     if (!isAccess) {
+//         return 'Доступ запрещен'
+//     }
+
+//     return 'Доступ разрешен';
+// }
+// console.log(getResourse(user));
+// console.log(getResourse(pechkin));

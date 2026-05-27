@@ -5,25 +5,41 @@
  */
 
 // your code
-const score = Math.floor(Math.random() * 100) + 1;
-function ball(object) {
-    if (score >= 0 && score <= 49) {
-        return 'F';
-    }
-    if (score >= 50 && score <= 69) {
-        return 'D';
-    }
+// const score = Math.floor(Math.random() * 100) + 1;
+// let grade = ball;
+// function ball(object) {
+//     if (score >= 0 && score <= 49) {
+//         return 'F';
+//     }
+//     if (score >= 50 && score <= 69) {
+//         return 'D';
+//     }
 
-    if (score >= 70 && score <= 79) {
-        return 'C';
-    }
+//     if (score >= 70 && score <= 79) {
+//         return 'C';
+//     }
 
-    if (score >= 80 && score <= 89) {
-        return 'B';
-    }
-    return 'A';
+//     if (score >= 80 && score <= 89) {
+//         return 'B';
+//     }
+//     return 'A';
 
+// }
+// console.log(ball(grade));
+
+ const score = Math.floor(Math.random() * 101); 
+let grade;
+
+if (score >= 90) {
+    grade = 'A';
+} else if (score >= 80) {
+    grade = 'B';
+} else if (score >= 70) {
+    grade = 'C';
+} else if (score >= 50) {
+    grade = 'D';
+} else {
+    grade = 'F';
 }
-let grade = ball;
 
-console.log(ball(grade));
+console.log(grade,score)

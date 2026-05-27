@@ -12,7 +12,7 @@
 const isAdmin = true;
 const isVerifiedUser = false;
 const hasSpecialPermission = false;
-const hasTemporaryPass = false;
+const hasTemporaryPass = true;
 
 const isAccess = (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
 

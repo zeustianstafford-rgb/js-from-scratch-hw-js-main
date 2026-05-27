@@ -5,7 +5,7 @@
 
 * Для успешного прохождения тестов не меняйте названия переменных!
 */
-function rollDice() {
+// function rollDice() {
   let dice1 = Math.floor(Math.random() * 6) + 1;
   let dice2 = Math.floor(Math.random() * 6) + 1;
   let isWinningDouble = false;
@@ -18,12 +18,13 @@ function rollDice() {
   console.log('Первый бросок: ' + dice1)
   console.log('Второй бросок: ' + dice2)
   if (!isWinningDouble) {
-    return ('Проигрышный дубль.')
+    console.log('Проигрышный дубль.')
   }
-  return ('Выигрышный дубль.')
-}
+  else{
+   console.log('Выигрышный дубль.')}
+// }
 
-console.log(rollDice());
+console.log(isWinningDouble);
 
 
 

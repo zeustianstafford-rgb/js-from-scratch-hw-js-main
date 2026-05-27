@@ -8,17 +8,26 @@
 */
 
 // тестовые данные (значения можно менять)
-const isAdmin = true
-const isVerifiedUser = false
-const hasSpecialPermission = true
-const hasTemporaryPass = false
+
+const isAdmin = true;
+const isVerifiedUser = false;
+const hasSpecialPermission = true;
+const hasTemporaryPass = false;
 
 const isAccess = (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
-if (isAccess === true) {
-   console.log("Доступ разрешен!")
-} else {
-    console.log("Доступ запрещен!");
-}
+
+console.log(isAccess);
+// const isAdmin = true
+// const isVerifiedUser = false
+// const hasSpecialPermission = true
+// const hasTemporaryPass = false
+
+// const isAccess = (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
+// if (isAccess === true) {
+//    console.log("Доступ разрешен!")
+// } else {
+//     console.log("Доступ запрещен!");
+// }
 // else {
 //     alert("Доступ запрещен!")
 // };

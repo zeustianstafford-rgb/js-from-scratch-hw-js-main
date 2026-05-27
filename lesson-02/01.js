@@ -9,24 +9,42 @@
 
 // тестовые данные (значения можно менять)
 
-const isAdmin = true;
+const isAdmin = false;
 const isVerifiedUser = true;
-const hasSpecialPermission = false;
-const hasTemporaryPass = true;
+const hasSpecialPermission = true;
+const hasTemporaryPass = false;
 
-let isAccess = (isAdmin ||  isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
+//   const isAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);
+//     const hasPermissonOrHasPass = (object.hasSpecialPermission || object.hasTemporaryPass);
+//     const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
 
-console.log(isAccess);
-// const isAdmin = true
+// const isAccess = (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
+if (isAdmin === true && hasSpecialPermission === true) {
+    isAccess = true 
+    console.log("Доступ разрешен!")}
+ else {
+    isAccess = false
+    console.log("Доступ запрещен!");
+}
+
+// const isAdmin = false
+// const isVerifiedUser = true
+// const hasSpecialPermission = true
+// const hasTemporaryPass = false
+
+
+
+// // your code
+// const A = isAdmin || isVerifiedUser
+// const B = hasSpecialPermission || hasTemporaryPass
+// let isAccess = A &&  B
+// const isAdminOrIsVerifiedUser = (isAdmin || isVerifiedUser);
+// const hasPermissonOrHasPass = (hasSpecialPermission || hasTemporaryPass);
+// const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
 // const isVerifiedUser = false
 // const hasSpecialPermission = true
 // const hasTemporaryPass = false
 
-// const isAccess = (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
-// if (isAccess === true) {
-//    console.log("Доступ разрешен!")
-// } else {
-//     console.log("Доступ запрещен!");
 // }
 // else {
 //     alert("Доступ запрещен!")

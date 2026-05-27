@@ -14,15 +14,16 @@ const isVerifiedUser = true;
 const hasSpecialPermission = true;
 const hasTemporaryPass = false;
 
-//   const isAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);
-//     const hasPermissonOrHasPass = (object.hasSpecialPermission || object.hasTemporaryPass);
-//     const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
+// const isAdminOrIsVerifiedUser = (isAdmin || isVerifiedUser);
+// const hasPermissonOrHasPass = (hasSpecialPermission || hasTemporaryPass);
+// const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
 
-// const isAccess = (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
-if (isAdmin === true && hasSpecialPermission === true) {
-    isAccess = true 
-    console.log("Доступ разрешен!")}
- else {
+ let  isAccess
+if ((isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass)) {
+    isAccess = true
+    console.log("Доступ разрешен!")
+}
+else {
     isAccess = false
     console.log("Доступ запрещен!");
 }

@@ -9,7 +9,7 @@
 
 // тестовые данные (значения можно менять)
 const isAdmin = true
-const isVerifiedUser = true
+const isVerifiedUser = false
 const hasSpecialPermission = true
 const hasTemporaryPass = false
 
@@ -18,7 +18,6 @@ if (isAccess === true) {
    console.log("Доступ разрешен!")
 } else {
     console.log("Доступ запрещен!");
-
 }
 // else {
 //     alert("Доступ запрещен!")

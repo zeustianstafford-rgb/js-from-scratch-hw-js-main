@@ -6,12 +6,54 @@
 * - Пользователь должен иметь статус администратора (isAdmin) или быть подтвержденным пользователем (isVerifiedUser)
 * - А также пользователь должен обладать специальным разрешением (hasSpecialPermission) или временным пропуском (hasTemporaryPass)
 */
-// const isAdmin = false
-// const isVerifiedUser = true
-// const hasSpecialPermission = true
-// const hasTemporaryPass = false
+const isAdmin = false
+const isVerifiedUser = true
+const hasSpecialPermission = true
+const hasTemporaryPass = false
 
+const isAdminOrIsVerifiedUser = (isAdmin || isVerifiedUser);
+const hasPermissonOrHasPass = (hasSpecialPermission || hasTemporaryPass);
+const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
+// const A = isAdmin || isVerifiedUser
+// const B = hasSpecialPermission || hasTemporaryPass
+// let isAccess = A && B
+// тестовые данные (значения можно менять)
 
+const isAdmin = false;
+const isVerifiedUser = true;
+const hasSpecialPermission = true;
+const hasTemporaryPass = false;
+
+let isAccess = false;
+
+// your code
+
+// if ((isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass)) {
+//     isAccess = true;
+// }
+const isAdminOrIsVerifiedUser = (isAdmin || isVerifiedUser);
+const hasPermissonOrHasPass = (hasSpecialPermission || hasTemporaryPass);
+let isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
+
+const isAdmin = false;
+const isVerifiedUser = true;
+const hasSpecialPermission = true;
+const hasTemporaryPass = false;
+
+isAdmin && ( hasPermissonOrHasPass || hasTemporaryPass)
+isVerifiedUser &&  (hasPermissonOrHasPass || hasTemporaryPass)
+// * Условия доступа:
+// * - Пользователь должен иметь статус администратора (isAdmin) или быть подтвержденным пользователем (isVerifiedUser)
+// * - А также пользователь должен обладать специальным разрешением (hasSpecialPermission) или временным пропуском (hasTemporaryPass)
+
+const isAccess = true && true;
+if (isAdmin || true || hasTemporaryPass) {
+    isAccess = true
+    console.log('Доступ разрешен')
+} else {
+    console.log('Accesse denied permission')
+    isAccess = false;
+};
 
 // // your code
 // const A = isAdmin || isVerifiedUser
@@ -23,10 +65,6 @@
 // const isVerifiedUser = true;
 // const hasSpecialPermission = true;
 // const hasTemporaryPass = false;
-
-// // const isAdminOrIsVerifiedUser = (isAdmin || isVerifiedUser);
-// // const hasPermissonOrHasPass = (hasSpecialPermission || hasTemporaryPass);
-// // const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
 
 //  let isAccess
 // if ((isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass)) {
@@ -83,9 +121,9 @@
 
 // function getResourse(object) {
 
-//     const isAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);
-//     const hasPermissonOrHasPass = (object.hasSpecialPermission || object.hasTemporaryPass);
-//     const isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
+//     let  isAdminOrIsVerifiedUser = (object.isAdmin || object.isVerifiedUser);
+//     let  hasPermissonOrHasPass = (object.hasSpecialPermission || object.hasTemporaryPass);
+//     let  isAccess = (isAdminOrIsVerifiedUser && hasPermissonOrHasPass);
 
 //     if (!isAccess) {
 //         return 'Доступ запрещен'
@@ -98,12 +136,12 @@
 
 
 
-const isAdmin = false
-const isVerifiedUser = true
-const hasSpecialPermission = true
-const hasTemporaryPass = false
+// const isAdmin = false
+// const isVerifiedUser = true
+// const hasSpecialPermission = true
+// const hasTemporaryPass = false
 
-let isAccess
+// let isAccess
 
 // your code 
 // Создать программный код, который определяет, может ли пользователь получить доступ к ресурсу на основе его роли и наличия разрешений.
@@ -114,11 +152,17 @@ let isAccess
 // * - А также пользователь должен обладать специальным разрешением (hasSpecialPermission) или временным пропуском (hasTemporaryPass)
 
 // (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass)
+const isAdmin = false
+const isVerifiedUser = true
+const hasSpecialPermission = true
+const hasTemporaryPass = false
 
-if (isAdmin || isVerifiedUser && hasSpecialPermission  || hasTemporaryPass) {
+let isAccess
+if (isAdmin || isVerifiedUser && hasSpecialPermission || hasTemporaryPass) {
     isAccess = true
     console.log('Доступ разрешен')
 } else {
     console.log('Accesse denied permission')
     isAccess = false;
 };
+if (isAdmin || isVerifiedUser && hasSpecialPermission || hasTemporaryPass)

@@ -9,5 +9,3 @@ if (a>b && a>c){
     return c;
 }
 }
-let total = findLargest(10, 20, 15);
-console.log(total);
